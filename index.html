@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <title>Taco Cannon Order Form</title>
     </head>
@@ -15,38 +15,110 @@
 
         <section id="form-container">
 
-            <p id="description">Fill out the options below to get the best taco you've ever had!</p>
+            <p id="description">Fill out the form to get the best taco you've ever had!</p>
 
             <form id="survey-form">
 
                 <div>
-                    <label for="name">Name: </label>
-                    <input id="name" type="text" placeholder="Enter your name">
+                    <div class="label-column">
+                        <label id="name-label" for="name">Name: </label>
+                    </div>
+                    <div class="option-column">
+                        <input id="name" type="text" placeholder="Enter your name">
+                    </div>
                 </div>
                 <br/>
 
                 <div>
-                    <label for="email">Email: </label>
-                    <input id="email" type="email" placeholder="Enter your email">
+                    <div class="label-column">
+                        <label id="email-label" for="email">Email: </label>
+                    </div>
+                    <div class="option-column">
+                        <input id="email" type="email" placeholder="Enter your email">
+                    </div>
                 </div>
                 <br/>
 
                 <div>
-                    <label for="delivery-or-pickup-select">Delivery or Pickup: </label>
-                    <select id="delivery-or-pickup-select">
-                        <option value=""></option>
-                        <option value="delivery">Delivery</option>
-                        <option value="pickup">Pick Up</option>
-                    </select>
+                    <div class="label-column">
+                        <label for="dropdown">Order Type: </label>
+                    </div>
+                    <div class="option-column">
+                        <select id="dropdown">
+                            <option value="">Choose</option>
+                            <option value="delivery">Delivery</option>
+                            <option value="pickup">Pick Up</option>
+                            <option value="osmosis">Osmosis</option>
+                        </select>
+                    </div>
                 </div>
                 <br/>
 
                 <div>
-                    <span>Choose your taco style: </span>
-                    <label for="regular-taco">Regular Taco</label>
-                    <input id="regular-taco" type="radio" name="taco-choice" label="Regular" checked="checked"/>
-                    <label for="spicy-taco">Spicy Taco</label>
-                    <input id="spicy-taco" type="radio" name="taco-choice" label="Spicy"/>
+                    <div class="label-column">
+                        <span>Choose your taco style: </span>
+                    </div>
+                    <div class="option-column">
+                        <input id="regular-taco" type="radio" name="taco-choice" label="Regular" checked="checked"/>
+                        <label for="regular-taco">Regular Taco</label>
+                        <br/>
+                        <input id="spicy-taco" type="radio" name="taco-choice" label="Spicy"/>
+                        <label for="spicy-taco">Spicy Taco</label>
+                        <br/>
+                        <input id="fish-taco" type="radio" name="taco-choice" label="Fish"/>
+                        <label for="fish-taco">Fish Taco</label>
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+                    <div class="label-column">
+                        <span>Choose your toppings: </span>
+                    </div>
+                    <div class="option-column">
+                        <input id="option-picodegallo" type="checkbox" value="picodegallo">
+                        <label for="option-picodegallo">Pico de gallo</label>
+                        <br/>
+                        <input id="option-salsaverde" type="checkbox" value="salsaverde">
+                        <label for="option-salsaverde">Salsa verde</label>
+                        <br/>
+                        <input id="option-picante" type="checkbox" value="picante">
+                        <label for="option-picante">Picante</label>
+                        <br/>
+                        <input id="option-cilantro" type="checkbox" value="cilantro">
+                        <label for="option-cilantro">Cilantro</label>
+                        <br/>
+                        <input id="option-guacamole" type="checkbox" value="guacamole">
+                        <label for="option-guacamole">Guacamole</label>
+                        <br/>
+                        <input id="option-lime" type="checkbox" value="lime">
+                        <label for="option-lime">Lime</label>
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+                    <div class="label-column">
+                        <label id="number-email" for="number">Quantity: </label>
+                    </div>
+                    <div class="option-column">
+                        <input id="number" type="number" placeholder="Enter quantity" max="100">
+                    </div>
+                </div>
+                <br>
+
+                <div>
+                    <div class="label-column">
+                        <label for="comments">Additional notes: </label>
+                    </div>
+                    <div class="option-column">
+                        <textarea id="comments" placeholder="Let us know if you have any special requests"></textarea>
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+                    <button id="submit" type="submit">Submit</button>
                 </div>
 
             </form>
