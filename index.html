@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Taco Cannon Order Form</title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1 id="title">Taco Cannon</h1>
+        </header>
+
+        <section id="form-container">
+
+            <p id="description">Fill out the options below to get the best taco you've ever had!</p>
+
+            <form id="survey-form">
+
+                <div>
+                    <label for="name">Name: </label>
+                    <input id="name" type="text" placeholder="Enter your name">
+                </div>
+                <br/>
+
+                <div>
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" placeholder="Enter your email">
+                </div>
+                <br/>
+
+                <div>
+                    <label for="delivery-or-pickup-select">Delivery or Pickup: </label>
+                    <select id="delivery-or-pickup-select">
+                        <option value=""></option>
+                        <option value="delivery">Delivery</option>
+                        <option value="pickup">Pick Up</option>
+                    </select>
+                </div>
+                <br/>
+
+                <div>
+                    <span>Choose your taco style: </span>
+                    <label for="regular-taco">Regular Taco</label>
+                    <input id="regular-taco" type="radio" name="taco-choice" label="Regular" checked="checked"/>
+                    <label for="spicy-taco">Spicy Taco</label>
+                    <input id="spicy-taco" type="radio" name="taco-choice" label="Spicy"/>
+                </div>
+
+            </form>
+
+        </section>
+
+    </body>
+
+</html>
