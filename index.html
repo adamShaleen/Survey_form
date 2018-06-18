@@ -9,22 +9,25 @@
 
     <body>
 
+        <!-- Free Code Camp test suite -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
         <header>
             <h1 id="title">Taco Cannon</h1>
         </header>
 
         <section id="form-container">
 
-            <p id="description">Fill out the form to get the best taco you've ever had!</p>
+            <p id="description">Are you ready for the best taco you've ever had!</p>
 
-            <form id="survey-form">
+            <form id="survey-form" onsubmit="return submitForm()">
 
                 <div>
                     <div class="label-column">
                         <label id="name-label" for="name">Name: </label>
                     </div>
                     <div class="option-column">
-                        <input id="name" type="text" placeholder="Enter your name">
+                        <input id="name" type="text" placeholder="Enter your name" required>
                     </div>
                 </div>
                 <br/>
@@ -34,7 +37,7 @@
                         <label id="email-label" for="email">Email: </label>
                     </div>
                     <div class="option-column">
-                        <input id="email" type="email" placeholder="Enter your email">
+                        <input id="email" type="email" placeholder="Enter your email" required>
                     </div>
                 </div>
                 <br/>
@@ -59,13 +62,13 @@
                         <span>Choose your taco style: </span>
                     </div>
                     <div class="option-column">
-                        <input id="regular-taco" type="radio" name="taco-choice" label="Regular" checked="checked"/>
+                        <input id="regular-taco" type="radio" name="taco-choice" label="Regular" value="regular" checked="checked"/>
                         <label for="regular-taco">Regular Taco</label>
                         <br/>
-                        <input id="spicy-taco" type="radio" name="taco-choice" label="Spicy"/>
+                        <input id="spicy-taco" type="radio" name="taco-choice" label="Spicy" value="spicy"/>
                         <label for="spicy-taco">Spicy Taco</label>
                         <br/>
-                        <input id="fish-taco" type="radio" name="taco-choice" label="Fish"/>
+                        <input id="fish-taco" type="radio" name="taco-choice" label="Fish" value="fish"/>
                         <label for="fish-taco">Fish Taco</label>
                     </div>
                 </div>
@@ -99,10 +102,10 @@
 
                 <div>
                     <div class="label-column">
-                        <label id="number-email" for="number">Quantity: </label>
+                        <label id="number-label" for="number">Quantity: </label>
                     </div>
                     <div class="option-column">
-                        <input id="number" type="number" placeholder="Enter quantity" max="100">
+                        <input id="number" type="number" placeholder="Qty" min="1" max="100" required>
                     </div>
                 </div>
                 <br>
@@ -123,8 +126,17 @@
 
             </form>
 
+              <p id="confirmation">Thanks for submitting your order,
+                  <span id="confirmationName"></span>. We'll send a confirmation email to
+                  <span id="confirmationEmail"></span>
+                  <br/>
+                  <br/>
+                  <button id="reset" onclick="reset()">Reset</button>
+              </p>
+
         </section>
 
     </body>
 
+    <script src="scripts.js"></script>
 </html>
